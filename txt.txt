@@ -1,8 +1,8 @@
-duckstation	bios		/home/q/backup/duckstation/
-duckstation	covers		/home/q/backup/duckstation/
-duckstation	savestates	/home/q//backup/duckstation/
-duckstation	memcards	/home/q/backup/duckstation/
-PCSX2		bios		/home/q/backup/pcsx2/
-PCSX2		covers		/home/q/backup/pcsx2/
-PCSX2		memcards	/home/q/backup/pcsx2/
-PCSX2		sstates		/home/q/backup/pcsx2/
+duckstation bios /home/q/backup/duckstation/
+duckstation covers /home/q/backup/duckstation/
+duckstation savestates /home/q//backup/duckstation/
+duckstation memcards /home/q/backup/duckstation/
+PCSX2 bios /home/q/backup/pcsx2/
+PCSX2 covers /home/q/backup/pcsx2/
+PCSX2 memcards /home/q/backup/pcsx2/
+PCSX2 sstates /home/q/backup/pcsx2/
