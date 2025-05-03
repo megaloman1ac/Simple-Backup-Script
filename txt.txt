@@ -1,0 +1,2 @@
+rpcs3	game
+rpcs3	home
