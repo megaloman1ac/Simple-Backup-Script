@@ -11,11 +11,17 @@ do
 			echo $title
 		fi
 
+		destFolder=$(echo $line | awk '{print $3}')
+
 		if [[ $(echo $line | awk '{print $2}') == *"."* ]]; then
 			find $path -type f -name "$(echo $line | grep $line | awk '{print $2}')" | xargs -I {} echo "-> {}"
 		else
 			source=$(find $path -type d -name "$(echo $line | awk '{print $2}')" )
-			echo $source | xargs -I {} echo -e "\e[32m->\e[0m {}" 
+			echo $source | xargs -I {} echo -e "\e[32m->\e[0m {}"
+			
+			#echo "SOURCE: $source"
+			#echo "DEST: $destFolder"
+			cp -r $source/ $destFolder
 		fi
 	done
 done < "txt.txt"

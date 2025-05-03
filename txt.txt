@@ -1,8 +1,4 @@
-duckstation	bios		$HOME/backup/duckstation
-duckstation	covers		$HOME/buckup/duckstation
-duckstation	savestates	$HOME/backup/duckstation
-duckstation	memcards	$HOME/backup/duckstation
-PCSX2		bios		$HOME/backup/pcsx2
-PCSX2		covers		$HOME/backup/pcsx2
-PCSX2		memcards	$HOME/backup/pcsx2
-PCSX2		sstates		$HOME/backup/pcsx2
+duckstation	bios		/home/q/backup/duckstation
+duckstation	covers		/home/q/backup/duckstation
+duckstation	savestates	/home/q/backup/duckstation
+duckstation	memcards	/home/q/backup/duckstation
