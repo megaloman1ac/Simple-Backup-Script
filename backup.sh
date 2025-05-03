@@ -15,7 +15,12 @@ do
 			find $path -type f -name "$(echo $line | grep $line | awk '{print $2}')" | xargs -I {} echo "-> {}"
 		else
 			source=$(find $path -type d -name "$(echo $line | awk '{print $2}')" )
-			echo $source | xargs -I {} echo -e "\e[32m->\e[0m {}" 
+			echo $source | xargs -I {} echo -e "\e[32m->\e[0m {}"
+			
+			#mkdir -p $destFolder
+
+#			cp -r $source $destFolder
+			echo $destFolder
 		fi
 	done
 done < "txt.txt"
