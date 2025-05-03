@@ -1,2 +1,8 @@
-rpcs3	game
-rpcs3	home
+duckstation	bios		$HOME/backup/duckstation
+duckstation	covers		$HOME/buckup/duckstation
+duckstation	savestates	$HOME/backup/duckstation
+duckstation	memcards	$HOME/backup/duckstation
+PCSX2		bios		$HOME/backup/pcsx2
+PCSX2		covers		$HOME/backup/pcsx2
+PCSX2		memcards	$HOME/backup/pcsx2
+PCSX2		sstates		$HOME/backup/pcsx2
