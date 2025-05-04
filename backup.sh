@@ -4,6 +4,11 @@ title=""
 
 while IFS= read -r line;
 do
+	if [[ "$line" == !* ]]; then
+		echo $line
+		continue
+	fi
+
 	for path in $(find $HOME -type d -name $(echo $line | awk '{print $1}')); do
 
 		destFolder=$(echo $line | awk '{print $3}')	
@@ -21,15 +26,10 @@ do
 			if [[ -d "$destFolder$(echo $line | awk '{print $2}')" ]]; then
 				continue
 			fi
-
-#			if [[ "$source" =~ "$destFolder" ]]; then
-#				#echo "--------------------------------------------------"
-#				continue
-#			else
+			
 			echo $source | xargs -I {} echo -e "\e[32m->\e[0m {}"				
-			cp -r $source $destFolder	 
-#			fi
-			#sleep 0.1
+			#cp -r $source $destFolder
+
 		fi
 	done
 done < "txt.txt"
