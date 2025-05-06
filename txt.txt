@@ -1,4 +1,0 @@
-duckstation	bios		/home/q/backup/duckstation
-duckstation	covers		/home/q/backup/duckstation
-duckstation	savestates	/home/q/backup/duckstation
-duckstation	memcards	/home/q/backup/duckstation
