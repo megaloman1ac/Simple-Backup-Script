@@ -5,7 +5,8 @@ title=""
 while IFS= read -r line;
 do
 	if [[ "$line" == !* ]]; then
-		echo $line
+		continue
+	elif [[ -z "$line" ]]; then
 		continue
 	fi
 
@@ -19,17 +20,32 @@ do
 		fi
 
 		if [[ $(echo $line | awk '{print $2}') == *"."* ]]; then
-			find $path -type f -name "$(echo $line | grep $line | awk '{print $2}')" | xargs -I {} echo "-> {}"
-		else
-			source=$(find $path -type d -name "$(echo $line | awk '{print $2}')" )
-
+			source=$(find $path -type f -name "$(echo $line | awk '{print $2}')")
 			if [[ -d "$destFolder$(echo $line | awk '{print $2}')" ]]; then
 				continue
 			fi
 			
+			if [[ ! -d "$destFolder" ]]; then
+				mkdir -p "$destFolder"
+			fi
+
+			echo $source | xargs -I {} echo -e "\e[32m->\e[0m {}"
+
+			cp -r -i -f $source $destFolder$(echo $line | awk '{print $2}')
+		else
+			source=$(find $path -type d -name "$(echo $line | awk '{print $2}')")
+
+			if [[ -d "$destFolder$(echo $line | awk '{print $2}')" ]]; then
+				continue
+			fi
+
+			if [[ ! -d "$destFolder" ]]; then
+				mkdir -p "$destFolder"
+			fi
+			
 			echo $source | xargs -I {} echo -e "\e[32m->\e[0m {}"				
-			#cp -r $source $destFolder
+			cp -r -i -f $source $destFolder
 
 		fi
 	done
-done < "txt.txt"
+done < "paths.txt"
