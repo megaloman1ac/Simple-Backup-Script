@@ -1,0 +1,11 @@
+! THIS IS SIMPLE COMMENT LINE 
+! FIRST COLUMN - DIRECTORY WHERE YOU NEED TO FIND FILE\FOLDER
+! SECOND - FILE\FOLDER YOU NEED TO FIND
+! THIRD - DIRECTORY YOU WANT TO COPY FILE\FOLDER TO
+
+! EXAMPLE ( TAB )!
+!    1		     2                3
+Downloads	test_folder	/home/{user}/{folder}
+Documents	test_file.test	/home/{user}/{folder}
+
+! USING JUST "*" FOR ALL FILES IS NOT ALLOWED NOW !
